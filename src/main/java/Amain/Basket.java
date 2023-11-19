@@ -3,15 +3,17 @@ package Amain;
 import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @SessionScope
 public class Basket {
-    private List<Integer> ints;
+    private Set<Integer> ints;
     private static int iteration = 1;
 
     public Basket() {
-        this.ints = new ArrayList<>(List.of());
+        this.ints = new HashSet<>(List.of());
     }
 
 
@@ -19,7 +21,7 @@ public class Basket {
         this.ints.addAll(ints);
         return iteration++;
     }
-    public List<Integer> getInts() {
+    public Set<Integer> getInts() {
         return ints;
     }
 
