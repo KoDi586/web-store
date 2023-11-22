@@ -1,6 +1,7 @@
-package services;
+package spring.services;
 
-import Amain.Basket;
+import Object.Basket;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 public class StoreServiceImpl implements StoreService {
     private Basket basket;
 
+    @Autowired
     public StoreServiceImpl() {
         this.basket = new Basket();
     }
