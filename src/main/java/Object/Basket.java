@@ -1,13 +1,14 @@
-package Amain;
+package Object;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 @SessionScope
+@Component
 public class Basket {
     private Set<Integer> ints;
     private static int iteration = 1;
